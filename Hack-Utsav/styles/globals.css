@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+    background-color: #eee;
+    opacity: 0.925;
+    font-family: "Poppins", sans-serif;
+}
+
+
+.userFormContainer {
+    @apply flex flex-col gap-2 mb-3 bg-gray-700 hover:bg-gray-600 font-bold p-4 rounded-xl
+}
+
+.userFormInput {
+    @apply p-1.5 transition-all duration-200 text-white border-b-2 border-t-0 border-l-0 border-r-0 focus:outline-none bg-transparent focus:border-yellow-500
+}
+
+.userFormlabel {
+    @apply mb-2
+}
+
+
+.container-event {
+    @apply flex flex-col gap-12 items-center my-3 bg-gray-700 py-5 rounded-xl text-slate-100
+}
+.verticalHead {
+    @apply text-yellow-500 p-2
+}
+
+.container-event h1 {
+    @apply text-xl font-semibold
+}
+
+.events {
+    @apply flex flex-col gap-6 w-full 
+}
+
+.event-item {
+    @apply flex flex-col items-center justify-between gap-5 p-5
+}
+
+.event-item-label-input {
+    @apply flex flex-row justify-between items-center gap-10 w-full
+}
+
+.event-item-label-input label {
+    @apply w-2/3
+}
+
+.navbutton {
+    @apply px-4 py-2 border rounded-lg mx-5 my-5 bg-slate-100 text-gray-700 hover:bg-slate-200 font-bold disabled:bg-slate-400
+}
+
+.event-item div select {
+    @apply p-2 text-gray-700
+}
+.checkBox {
+    @apply appearance-none border rounded-sm border-gray-400 checked:bg-yellow-500 checked:border-yellow-500 focus:outline-none transition duration-200 bg-gray-500 bg-contain bg-center bg-no-repeat h-6 w-6 align-top cursor-pointer
+}
