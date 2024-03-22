@@ -7,6 +7,7 @@ import { EventForm } from "@/components/EventForm";
 import { PaymentForm } from "@/components/PaymentForm";
 import mrlogo from "@/assets/mrlogo.png";
 import Image from "next/image";
+import AimlLogo from "@/assets/AimlLogo.png"
 import { Roboto_Slab } from "next/font/google"
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
@@ -171,13 +172,21 @@ export default function Home() {
     <main>
       <div className={`fixed top-0 border-4 border-yellow-500 ${progress} transition-all duration-150`} />
       <div className="flex flex-col justify-center items-center">
-        <Image src={mrlogo} alt="MRIIRS Logo" width={500} />
+      <div style={{ display: 'flex', gap: '20px' }}>
+        <Image src={AimlLogo} alt="AIML LOGO" width={100} />
+        <Image src={mrlogo} alt="MRIIRS Logo" width={300} />
+      </div>
+        {/* <Image src={mrlogo} alt="MRIIRS Logo" width={500} />
+        <Image src={AimlLogo} alt="AIML LOGO" width={300} /> */}
         <div className="text-center my-5">
-          <h1 className="font-bold text-4xl text-gray-700">7th Edition</h1>
+          <h1 className="font-bold text-4xl text-gray-700">Avarneeya - AIML Club brings </h1>
           <span className={roboto.className}>
-            <h1 className="font-extrabold text-6xl bg-gradient-to-r from-red-700 to bg-yellow-500 bg-clip-text text-transparent outline-8 uppercase">InnoSkill 2024</h1>
+            <h1 className="font-extrabold text-6xl bg-gradient-to-r from-red-700 to bg-yellow-500 bg-clip-text text-transparent outline-8 uppercase px-4 py-2">Hack-उत्सव 2024</h1>
           </span>
-          <h1 className="font-bold text-4xl text-gray-700">3rd-4th April</h1>
+          <span className={roboto.className}>
+            <h2 className="font-extrabold text-3xl bg-gradient-to-r from-red-700 to bg-yellow-500 bg-clip-text text-transparent outline-8 uppercase px-4 py-2">Unlock the secrets and Uncover the prize</h2>
+          </span>
+          <h1 className="font-bold text-4xl text-gray-700">12th April</h1>
         </div>
       </div>
       <div className="p-10 flex justify-center">

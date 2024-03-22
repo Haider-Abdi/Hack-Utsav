@@ -55,7 +55,11 @@ export function UserForm({
                     <input required min={1} type="text" className="userFormInput" value={phone} onChange={e => updateFields({ phone: e.target.value })} />
                 </div>
 
+                <div className="userFormContainer" >
 
+                    <label className="userFormLabel">Team Name</label>
+                    <input required type="text" className="userFormInput" value={teamName} onChange={(e) => updateFields({ teamName: e.target.value })} />
+                </div>
                 <div className="userFormContainer">
                     <label className="userFormLabel">Where Do You Study
                     </label>
@@ -64,8 +68,8 @@ export function UserForm({
                         updateFields({ option: e.target.value });
 
                     }} className="p-2 w-full rounded-lg text-gray-800">
-                        <option value={"School"}>School</option>
-                        <option value={"University"}>University</option>
+                        <option value={"School"}>Mriirs/Mru</option>
+                        <option value={"University"}>Others</option>
                     </select>
                 </div>
 
@@ -88,15 +92,7 @@ export function UserForm({
                     <label className="userFormLabel">University/School Roll Number</label>
                     <input required type="text" className="userFormInput" value={rollNo} onChange={e => updateFields({ rollNo: e.target.value })} />
                 </div>
-
-
-                <div className="userFormContainer" >
-
-                    <label className="userFormLabel">Team Name</label>
-                    <input required type="text" className="userFormInput" value={teamName} onChange={(e) => updateFields({ teamName: e.target.value })} />
-                </div>
             </div>
-
         </FormWrapper>
     )
 }
