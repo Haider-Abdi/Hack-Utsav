@@ -4,7 +4,9 @@
 
 
 body {
-    background-color: #eee;
+    background-image: url(https://i.pinimg.com/originals/9b/67/b4/9b67b4e5299c980b2d6beaf7dc6958b4.gif);
+    background-repeat: no-repeat;
+    background-size:cover;
     opacity: 0.925;
     font-family: "Poppins", sans-serif;
 }
