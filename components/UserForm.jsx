@@ -14,8 +14,6 @@ export function UserForm({
     rollNo,
     teamName,
     updateFields,
-    prices,
-    setPrices,
     fromUni,
     setFromUni
 }) {

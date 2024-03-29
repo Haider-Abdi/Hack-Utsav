@@ -13,6 +13,18 @@ export const POST = async (req) => {
         semester,
         rollNo,
         teamName,
+        members,
+        firstNameMem2,
+        lastNameMem2,
+        ageMem2,
+        phoneMem2,
+        semesterMem2,
+        uniNameMem2,
+        fee,
+        timestamp,
+        transactionID,
+        
+        
     } = await req.json()
 
     const auth = await google.auth.getClient({
@@ -23,17 +35,15 @@ export const POST = async (req) => {
     const sheets = google.sheets({ version: "v4", auth });
 
     let values = [[
-        firstName, lastName, email, age, phone, option, uniName, semester, rollNo, teamName
+        firstName, lastName, email, age, phone, option, uniName, semester, rollNo, teamName, members, firstNameMem2, lastNameMem2, ageMem2, phoneMem2, semesterMem2, uniNameMem2, fee, timestamp , transactionID
     ]]
-
 
     const resource = {
         values
     };
 
     try {
-
-        await write([], resource, sheets, "1");
+        await write(resource, sheets);
 
         return new Response(JSON.stringify("Updated Cells"), { status: 201 });
 

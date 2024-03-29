@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import FormWrapper from "./FormWrapper";
 import UPI300 from "@/assets/300.png";
 import UPI200 from "@/assets/2001.png";
@@ -6,7 +6,12 @@ import UPI500 from "@/assets/5001.png";
 import cross from "@/assets/cross.png";
 import Image from "next/image";
 
-export function PaymentForm({ prices }) {
+export function PaymentForm({
+    fee,
+    transactionID,
+    prices,
+    updateFields
+}) {
     const [screenshot, setScreenshot] = useState(null);
 
     let imageSrc;
@@ -25,6 +30,10 @@ export function PaymentForm({ prices }) {
         const file = e.target.files[0];
         setScreenshot(file);
     };
+
+    useEffect(() => {
+        updateFields({ fee: prices })
+    }, [])
 
     return (
         <FormWrapper title="Pay your registration fee here">
@@ -45,20 +54,21 @@ export function PaymentForm({ prices }) {
                     <Image src={imageSrc} alt="UPI QR CODE" width={500} />
                 </div>
                 <div className="mt-4 flex flex-col justify-center items-center">
-                    <label htmlFor="screenshotInput" className="block font-semibold">Upload Screenshot:</label>
+                    {/* <label htmlFor="screenshotInput" className="block font-semibold">Upload Screenshot:</label>
                     <label htmlFor="screenshotInput" className="mt-1 bg-gray-200 hover:bg-gray-400 text-black font-bold py-2 px-4 rounded-lg cursor-pointer">Choose File</label>
-                    <input 
-                        type="file" 
-                        id="screenshotInput" 
+                    <input
+                        type="file"
+                        id="screenshotInput"
                         accept="image/*"
-                        onChange={handleScreenshotChange} 
+                        onChange={handleScreenshotChange}
                         className="hidden"
                     />
                     {screenshot ? (
                         <span>{screenshot.name}</span>
                     ) : (
                         <span>No file selected</span>
-                    )}
+                    )} */}
+                    <input type="text" placeholder='transaction id....' className='userFormInput' value={transactionID} onChange={(e) => updateFields({transactionID: e.target.value})}/>
                 </div>
             </div>
         </FormWrapper>

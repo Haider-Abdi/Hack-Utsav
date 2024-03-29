@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "googleapis": "^134.0.0",
+    "moment": "^2.30.1",
     "next": "14.0.2",
     "react": "^18",
     "react-dom": "^18",
