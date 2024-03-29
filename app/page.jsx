@@ -82,6 +82,7 @@ const initalData = {
     { eventName: "Move To The Groove 'Exploring the inner self through creative movement'", members: null, price: 0 },
     { eventName: "Screen Masters", members: null, price: 0 },
   ],
+  prices: ""
 }
 
 export default function Home() {
@@ -108,13 +109,13 @@ export default function Home() {
       setFromUni={setFromUni}
     />,
 
-    <EventForm {...data}
-      updateFields={updateFields}
-      prices={prices}
-      setPrices={setPrices}
-      fromUni={fromUni}
-      setFromUni={setFromUni}
-    />,
+    // <EventForm {...data}
+    //   updateFields={updateFields}
+    //   prices={prices}
+    //   setPrices={setPrices}
+    //   fromUni={fromUni}
+    //   setFromUni={setFromUni}
+    // />,
 
     <PaymentForm prices={prices} />,
   ])

@@ -10,17 +10,18 @@
 export const write = async (vertical, resource, sheets, vIndex) => {
     let index = 2;
 
-    for (const [i, data] of vertical.entries()) {
-        if (data.members !== null) {
-            await sheets.spreadsheets.values.append({
-                spreadsheetId: process.env.SHEET_ID,
-                range: `vertical${vIndex}!A${index}:M${index}`,
-                valueInputOption: "RAW",
-                resource: {
-                    values: [[...resource.values[0], data.eventName, data.members, data.price]]
-                }
-            });
-            index++;
+    await sheets.spreadsheets.values.append({
+        spreadsheetId: process.env.SHEET_ID,
+        range: `Sheet1!A${index}:M${index}`,
+        valueInputOption: "RAW",
+        resource: {
+            values: [[...resource.values[0]]]
         }
-    }
+    })
+    // for (const [i, data] of vertical.entries()) {
+    //     if (data.members !== null) {
+    //         });
+    //         index++;
+    //     }
+    // }
 }
