@@ -59,23 +59,33 @@ export function UserForm({
                     <input required type="text" className="userFormInput" value={teamName} onChange={(e) => updateFields({ teamName: e.target.value })} />
                 </div>
                 <div className="userFormContainer">
-                    <label className="userFormLabel">Where Do You Study
-                    </label>
-                    <select value={option} onChange={(e) => {
-                        setFromUni(() => e.target.value !== "School")
-                        updateFields({ option: e.target.value });
+    <label className="userFormLabel">Where Do You Study</label>
+    <select
+        value={option}
+        onChange={(e) => {
+            const selectedOption = e.target.value;
+            setFromUni(() => selectedOption !== "School");
+            updateFields({ option: selectedOption });
+        }}
+        className="p-2 w-full rounded-lg text-gray-800"
+    >
+        <option value={"School"}>Mriirs/Mru</option>
+        <option value={"University"}>Others</option>
+    </select>
 
-                    }} className="p-2 w-full rounded-lg text-gray-800">
-                        <option value={"School"}>Mriirs/Mru</option>
-                        <option value={"University"}>Others</option>
-                    </select>
-                </div>
-
-                <div className="userFormContainer" >
-
-                    <label className="userFormLabel">University/School Name</label>
-                    <input required type="text" className="userFormInput" value={uniName} onChange={e => updateFields({ uniName: e.target.value })} />
-                </div>
+    {option === "University" && (
+        <>
+            <label className="userFormLabel">University/School Name</label>
+            <input
+                required
+                type="text"
+                className="userFormInput"
+                value={uniName}
+                onChange={(e) => updateFields({ uniName: e.target.value })}
+            />
+        </>
+    )}
+</div>
 
 
                 <div className="userFormContainer" >

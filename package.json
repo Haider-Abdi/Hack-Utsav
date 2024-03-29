@@ -9,12 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "and": "^0.0.3",
     "googleapis": "^134.0.0",
     "moment": "^2.30.1",
     "next": "14.0.2",
     "react": "^18",
     "react-dom": "^18",
-    "react-toastify": "^10.0.5"
+    "react-toastify": "^10.0.5",
+    "run": "^1.5.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",
