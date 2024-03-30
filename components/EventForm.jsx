@@ -79,8 +79,8 @@ export function EventForm({
                         <label>Last Name</label>
                         <input type="text" value={lastNameMem2} onChange={e => updateFields({ lastNameMem2: e.target.value })} className="userFormInput" />
 
-                        <label>Age</label>
-                        <input min={1} type="number" value={ageMem2} onChange={e => updateFields({ ageMem2: e.target.value })} className="userFormInput" />
+                        <label>Email-ID</label>
+                        <input type="text" value={ageMem2} onChange={e => updateFields({ ageMem2: e.target.value })} className="userFormInput" />
 
                         <label>Contact Number</label>
                         <input min={1} type="number" value={phoneMem2} onChange={e => updateFields({ phoneMem2: e.target.value })} className="userFormInput" />
