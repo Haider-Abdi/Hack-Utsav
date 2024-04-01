@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import FormWrapper from "./FormWrapper";
-import UPI300 from "@/assets/300.png";
+import UPI350 from "@/assets/350.png";
 import UPI200 from "@/assets/2001.png";
 import UPI500 from "@/assets/5001.png";
 import cross from "@/assets/cross.png";
@@ -16,15 +16,19 @@ export function PaymentForm({
 
     let imageSrc;
 
-    if (prices === 300) {
-        imageSrc = UPI300;
-    } else if (prices === 500) {
-        imageSrc = UPI500;
-    } else if (prices === 200) {
-        imageSrc = UPI200;
-    } else {
-        imageSrc = cross;
-    }
+    if (prices === 350) {
+        imageSrc = UPI350;
+    } 
+
+    // if (prices === 300) {
+    //     imageSrc = UPI300;
+    // } else if (prices === 500) {
+    //     imageSrc = UPI500;
+    // } else if (prices === 200) {
+    //     imageSrc = UPI200;
+    // } else {
+    //     imageSrc = cross;
+    // }
 
     const handleScreenshotChange = (e) => {
         const file = e.target.files[0];

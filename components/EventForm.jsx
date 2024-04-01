@@ -19,25 +19,9 @@ export function EventForm({
     updateFields
 }) {
     const calculatePriceForThatEvent = (members) => {
-        let priceForThatEvent;
-        const memberCount = parseInt(members);
+        
 
-        if (!fromUni) {
-            if (memberCount === 1) {
-                priceForThatEvent = 200;
-            } else if (memberCount === 2) {
-                priceForThatEvent = 300;
-            }
-        }
-        if (fromUni) {
-            if (memberCount === 1) {
-                priceForThatEvent = 300;
-            } else if (memberCount === 2) {
-                priceForThatEvent = 500;
-            }
-        }
-
-        return priceForThatEvent;
+        return 350;
     }
 
     const calculateTotalPrice = () => {
