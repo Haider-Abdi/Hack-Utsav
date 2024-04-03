@@ -9,7 +9,11 @@ body {
     opacity: 0.925;
     font-family: "Poppins", sans-serif;
 }
-
+body {
+    margin: 0;
+    line-height: inherit;
+    background: rgb(4, 20, 32);
+}
 
 .userFormContainer {
     @apply flex flex-col gap-2 mb-3 bg-gray-700 hover:bg-gray-600 font-bold p-4 rounded-xl
